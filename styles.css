@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 20px;
+}
+.report-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.university {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.faculty {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+hr {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.report-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.report-info td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+.report-info input {
+    width: 90%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+}
+h1, h2, h3, h4 {
+    color: #111;
+    page-break-after: avoid;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    overflow-x: auto;
+    border-left: 4px solid #ccc;
+    font-family: 'Courier New', Courier, monospace;
+}
+.screenshot-container {
+    margin: 15px 0;
+    page-break-inside: avoid;
+}
+.screenshot-upload {
+    border: 2px dashed #ccc;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    min-height: 10px;
+}
+.screenshot-upload img {
+    max-width: 100%;
+    max-height: 300px;
+    display: none;
+}
+.text-answer {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 20px;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+input[type="file"] {
+    display: none;
+}
+.student-info {
+    margin-bottom: 30px;
+    page-break-after: avoid;
+}
+.student-info input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+.mark {
+    background-color: #ffffcc;
+}
+.question {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 15px;
+    page-break-after: avoid;
+}
+.active {
+    border: 2px solid #4CAF50;
+    background-color: #f9fff9;
+}
+
+/* Ciemny motyw */
+body.dark-mode {
+    background-color: #222;
+    color: #eee;
+}
+body.dark-mode pre {
+    background-color: #333;
+    color: #f0f0f0;
+    border-left: 4px solid #555;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
+    color: #fff;
+}
+body.dark-mode .text-answer {
+    background-color: #333;
+    border-color: #555;
+    color: #eee;
+}
+body.dark-mode .screenshot-upload {
+    border-color: #555;
+}
+body.dark-mode .report-info td {
+    border-color: #555;
+    background-color: #333;
+}
+body.dark-mode .report-info input {
+    background-color: #444;
+    color: #eee;
+    border-color: #555;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+    .screenshot-upload {
+        border: 1px solid #eee;
+        padding: 5px;
+        min-height: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .screenshot-upload:empty {
+        display: none;
+    }
+    .screenshot-upload img {
+        margin: 0 auto;
+    }
+    .text-answer {
+        border: 1px solid #eee;
+    }
+    .text-answer:empty{
+        display: none;
+    }
+    body {
+        padding: 10px;
+        font-size:  0.8em;
+    }
+    .page-break {
+        page-break-before: always;
+    }
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+    .report-info {
+        font-size: 1em;
+        width: 100% !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    .report-header {
+        page-break-after: avoid;
+        break-after: avoid;
+        margin-bottom: 20mm;
+    }
+    .report-info, .report-info td {
+        border: 1px solid black !important;
+        border-collapse: collapse !important;
+    }
+    .report-info input {
+        border: none;
+        background: transparent;
+        width: 100%;
+    }
+    body, body.dark-mode {
+        background-color: white;
+        color: black;
+    }
+    body.dark-mode pre, body.dark-mode h1, body.dark-mode h2, 
+    body.dark-mode h3, body.dark-mode h4,
+    body.dark-mode .text-answer, body.dark-mode .report-info td,
+    body.dark-mode .report-info input {
+        background-color: white;
+        color: black;
+        border-color: #ccc;
+    }
+}
