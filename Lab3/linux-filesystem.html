@@ -471,17 +471,5 @@ hard</pre>
             </section>
         </article>
     </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            loadComponent('header', '.report-header');
-            loadComponent('controls', '.controls-container');
-            
-            // Re-initialize screenshot containers if needed
-            document.querySelectorAll('.screenshot-container').forEach(() => {
-                loadComponent('screenshot-container', '.screenshot-container');
-            });
-        });
-    </script>
 </body>
 </html>
